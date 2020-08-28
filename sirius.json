@@ -1,0 +1,58 @@
+{
+    "control" : {
+        "processing_unit" : "cpu",
+        "std_evp_solver_type" : "lapack",
+        "gen_evp_solver_type" : "lapack",
+        "verbosity" : 0,
+        "!print_forces" : true,
+        "!print_stress" : true
+    },
+
+    "parameters" : {
+        "electronic_structure_method" : "pseudopotential",
+        "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PZ"],
+        "smearing_width" : 0.025,
+        "use_symmetry" : true,
+        "num_mag_dims" : 0,
+        "num_fv_states": -1,
+        "gk_cutoff" : 6.0,
+        "pw_cutoff" : 20.00,
+        "energy_tol" : 1e-8,
+        "potential_tol" : 1e-8,
+        "num_dft_iter" : 100,
+        "ngridk" : [3,3,3]
+    },
+
+
+    "iterative_solver" : {
+        "type" : "davidson",
+        "min_occupancy" : 1e-5
+    },
+
+
+    "unit_cell" : {
+
+        "lattice_vectors" :
+        [
+            [5.397057814307557, 0.0, 0.0],
+            [2.698528907153779, 4.673989172883661, 0.0],
+            [2.698528907153779, 2.557996390961221, 4.406679252451386]
+        ],
+        "atom_types" : ["Al"],
+        "atom_files" : {
+            "Al" : "Al.json"
+        },
+        "atoms" : {
+            "Al" : [
+                [0.0, 0.0, 0.0]
+            ]
+        }
+    },
+
+    "mixer" : {
+        "beta" : 0.95,
+        "type" : "broyden1",
+        "max_history" : 8
+    }
+
+}
