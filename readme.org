@@ -1,0 +1,10 @@
+** =check_pseudo_hamiltonian_gradient.py=
+Compare slope with finite difference in the pseudo Hamiltonian method.
+** =line_search_load.py=
+Load failed state generate using `nlcg --dump-on-error`.
+** =stiefel_manifold.py=
+Evaluate total energy along geodesic. See
+
+- Baarman, K., Havu, V., & Eirola, T. (). Direct Minimization for Ensemble
+  Electronic Structure Calculations. , 66(3), 1218–1233.
+  http://dx.doi.org/10.1007/s10915-015-0058-8
